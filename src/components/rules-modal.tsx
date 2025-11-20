@@ -216,7 +216,7 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
                 <div className="bg-teal-50 rounded-lg p-4">
                   <h4 className="text-teal-800 mb-2">Group Stage, Quarter Finals & Third Place</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• In matches played as a single set, teams may switch sides after 11 points, but only if both teams agree.</li>
+                    <li>• In matches played as a single set, teams can change the court based on the mutual agreement after 11 points. </li>
                   </ul>
                 </div>
 

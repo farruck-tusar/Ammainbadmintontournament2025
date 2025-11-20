@@ -76,9 +76,6 @@ export function CourtAllocation() {
                 <div className="text-2xl mb-1">Court {court.number}</div>
                 <div className="flex items-center justify-center gap-2">
                   <span className="uppercase tracking-wider text-sm">Group {court.group}</span>
-                  <div className="w-6 h-6 rounded-full bg-white/30 flex items-center justify-center text-sm">
-                    4
-                  </div>
                 </div>
               </div>
               <div className={`${colors.teamBg} p-4`}>
