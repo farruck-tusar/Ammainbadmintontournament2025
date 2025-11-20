@@ -31,14 +31,20 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
-
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const countdownItems = [
+    { label: "Days", value: timeLeft.days },
+    { label: "Hours", value: timeLeft.hours },
+    { label: "Minutes", value: timeLeft.minutes },
+    { label: "Seconds", value: timeLeft.seconds },
+  ];
+
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-8 border-4 border-emerald-600 relative overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border-4 border-emerald-600 relative overflow-hidden">
       {/* Decorative shuttlecock */}
-      <div className="absolute top-4 right-4 opacity-5">
+      <div className="absolute top-4 right-4 opacity-5 hidden sm:block">
         <svg width="100" height="100" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="60" cy="60" r="10" fill="#059669"/>
           <path d="M60 60 L60 15 L40 28 L60 60" fill="#10b981" opacity="0.7"/>
@@ -48,20 +54,15 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
         </svg>
       </div>
 
-      <div className="flex items-center justify-center gap-3 mb-6">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
         <Clock className="w-8 h-8 text-emerald-600" />
-        <h2 className="text-center text-emerald-700">Time Until Tournament Starts</h2>
+        <h2 className="text-center text-emerald-700 text-lg sm:text-xl">Time Until Tournament Starts</h2>
       </div>
-      
-      <div className="grid grid-cols-4 gap-4 mb-6">
-        {[
-          { label: "Days", value: timeLeft.days },
-          { label: "Hours", value: timeLeft.hours },
-          { label: "Minutes", value: timeLeft.minutes },
-          { label: "Seconds", value: timeLeft.seconds },
-        ].map((item) => (
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+        {countdownItems.map((item) => (
           <div key={item.label} className="text-center">
-            <div className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-xl p-6 shadow-lg relative overflow-hidden">
+            <div className="bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-xl p-4 sm:p-6 shadow-lg relative overflow-hidden">
               {/* Subtle pattern inside countdown boxes */}
               <div className="absolute inset-0 opacity-10">
                 <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -71,14 +72,14 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
                   <rect width="100%" height="100%" fill={`url(#dots-${item.label})`} />
                 </svg>
               </div>
-              <div className="text-5xl mb-2 relative z-10">{String(item.value).padStart(2, "0")}</div>
-              <div className="text-sm uppercase tracking-wider opacity-90 relative z-10">{item.label}</div>
+              <div className="text-3xl sm:text-5xl mb-1 sm:mb-2 relative z-10">{String(item.value).padStart(2, "0")}</div>
+              <div className="text-xs sm:text-sm uppercase tracking-wider opacity-90 relative z-10">{item.label}</div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="text-center text-teal-700 text-xl">
+      <div className="text-center text-teal-700 text-base sm:text-xl">
         {timeLeft.days} days until tournament
       </div>
     </div>
