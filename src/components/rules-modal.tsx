@@ -52,7 +52,6 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
               day of shuttles, smashes, and sportsmanship!
             </p>
 
-            {/* 1. Event Details */}
             <section className="mb-8">
               <h3 className="text-emerald-700 mb-4">1. Event Details & Location</h3>
               <ul className="space-y-2 text-gray-700">
@@ -62,7 +61,6 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
               </ul>
             </section>
 
-            {/* 2. Match Format */}
             <section className="mb-8">
               <h3 className="text-emerald-700 mb-4">2. Match Format & Duration</h3>
               <p className="text-gray-700 mb-4">
@@ -74,12 +72,8 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
                 <li><strong>Semi Finals:</strong> 45 minutes</li>
                 <li><strong>Final:</strong> 45 minutes</li>
               </ul>
-              <p className="text-gray-700 mt-4 italic">
-                Matches run on continuous time - no extra time.
-              </p>
             </section>
 
-            {/* 3. Group Stage */}
             <section className="mb-8">
               <h3 className="text-emerald-700 mb-4">3. Group Stage</h3>
               
@@ -116,7 +110,6 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
               </div>
             </section>
 
-            {/* 4. Knockout Stage */}
             <section className="mb-8">
               <h3 className="text-emerald-700 mb-4">4. Knockout Stage</h3>
               
@@ -161,7 +154,6 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
               </div>
             </section>
 
-            {/* 5. Court Allocation */}
             <section className="mb-8">
               <h3 className="text-emerald-700 mb-4">5. Court Allocation & Timeliness</h3>
               <p className="text-gray-700 mb-4">
@@ -194,36 +186,59 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
               </div>
             </section>
 
-            {/* 6. Shuttlecock Rules */}
             <section className="mb-8">
               <h3 className="text-emerald-700 mb-4">6. Shuttlecock Rules</h3>
               <p className="text-gray-700 mb-4">
-                Know your shuttles! Fair play and consistent equipment are essential.
+                The confirmed shuttle for the tournament is Victor Gold Champion (Speed 77).
               </p>
-
               <div className="space-y-4">
                 <div className="bg-teal-50 rounded-lg p-4">
                   <h4 className="text-teal-800 mb-2">Group Stage, Quarter Finals & Third Place</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Organisers provides 1 shuttle per match. If more are needed, teams must use their own personal shuttles.</li>
-                    <li>• Personal shuttles must be standard tournament speed (77/78).</li>
-                    <li>• Referee's decision is final on shuttle speed disputes.</li>
+                    <li>• Organisers will provide 2 shuttles per match.</li>
                   </ul>
                 </div>
 
                 <div className="bg-cyan-50 rounded-lg p-4">
                   <h4 className="text-cyan-800 mb-2">Semi Finals & Final</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Organisers provides 3 shuttles per match. If more are needed, teams must use their own personal shuttles, approved by the referee.</li>
-                    <li>• Damaged shuttles must be replaced from provided stock or personal stock if all 3 are used.</li>
+                    <li>• Organisers will provide 2 shuttles per set.</li>
                   </ul>
                 </div>
               </div>
             </section>
 
-            {/* 7. Official Rules */}
             <section className="mb-8">
-              <h3 className="text-emerald-700 mb-4">7. Official Rules & Conduct</h3>
+              <h3 className="text-emerald-700 mb-4">7. Side Change Rules</h3>
+              <p className="text-gray-700 mb-4">
+              </p>
+              <div className="space-y-4">
+                <div className="bg-teal-50 rounded-lg p-4">
+                  <h4 className="text-teal-800 mb-2">Group Stage, Quarter Finals & Third Place</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• In matches played as a single set, teams may switch sides after 11 points, but only if both teams agree.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-cyan-50 rounded-lg p-4">
+                  <h4 className="text-cyan-800 mb-2">Semi Finals & Final</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Teams will only change sides at the end of each set.</li>
+                    <li>• If the match goes to a third set, teams will change sides when a team reaches 11 points.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-8">
+              <h3 className="text-emerald-700 mb-4">8. Shuttle Contact With Ceiling</h3>
+              <p className="text-gray-700 mb-4">
+              If the shuttle touches the ceiling or any top structure, the point will be awarded to the opposite team. This rule applies during normal play and during the serve.
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <h3 className="text-emerald-700 mb-4">9. Official Rules & Conduct</h3>
               <p className="text-gray-700 mb-4">
                 Adherence to BWF rules and good sportsmanship are expected.
               </p>
@@ -266,18 +281,16 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
               </div>
             </section>
 
-            {/* 8. Media Consent */}
             <section className="mb-8">
-              <h3 className="text-emerald-700 mb-4">8. Media Consent</h3>
+              <h3 className="text-emerald-700 mb-4">10. Media Consent</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Players agree to appear in tournament photos/videos.</li>
                 <li>• Organisers may use images for promotional purposes.</li>
               </ul>
             </section>
 
-            {/* 9. Discipline */}
             <section className="mb-8">
-              <h3 className="text-emerald-700 mb-4">9. Discipline</h3>
+              <h3 className="text-emerald-700 mb-4">11. Discipline</h3>
               <p className="text-gray-700 mb-4">
                 Fair play and respect are paramount for a great tournament experience.
               </p>
@@ -295,7 +308,7 @@ export function RulesModal({ isOpen, onClose }: RulesModalProps) {
                 <div className="bg-red-50 rounded-lg p-4 border-2 border-red-200">
                   <h4 className="text-red-900 mb-2">Zero Tolerance</h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Abusive language or disrespect towards officials/players results in immediate penalty</li>
+                    <li>• Abusive language or disrespect towards officials/players results in immediate disqualification</li>
                     <li>• Referee's decision is final</li>
                   </ul>
                 </div>
