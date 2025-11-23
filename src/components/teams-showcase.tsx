@@ -124,7 +124,7 @@ export function TeamsShowcase() {
         <h2 className="text-emerald-700">Participating Teams</h2>
       </div>
       
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
         {teams.map((team, index) => (
           <div
             key={index}
@@ -154,10 +154,10 @@ export function TeamsShowcase() {
                 {/* Numbered Players */}
                 <div className="mt-2 text-center space-y-1 pb-3">
                     <div className="text-sm text-gray-700 font-medium">
-                    <span className="text-emerald-600 mt-0.5">•</span> {team.player1}
+                      {team.player1}
                     </div>
                     <div className="text-sm text-gray-700 font-medium">
-                    <span className="text-emerald-600 mt-0.5">•</span> {team.player2}
+                      {team.player2}
                     </div>
                 </div>
                 </div>
