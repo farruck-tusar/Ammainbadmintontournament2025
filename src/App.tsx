@@ -2,7 +2,7 @@ import { CountdownTimer } from "./components/countdown-timer";
 import { TournamentStructure } from "./components/tournament-structure";
 import { MatchSchedule } from "./components/match-schedule";
 import { CourtAllocation } from "./components/court-allocation";
-import { ParticipatingTeams } from "./components/participating-teams";
+import { TeamsShowcase } from "./components/teams-showcase";
 import { RulesModal } from "./components/rules-modal";
 import { Calendar, MapPin } from "lucide-react";
 import { useState } from "react";
@@ -124,7 +124,7 @@ export default function App() {
         <TournamentStructure onViewRules={() => setIsRulesModalOpen(true)} />
         <MatchSchedule />
         <CourtAllocation />
-        <ParticipatingTeams />
+        <TeamsShowcase />
       </div>
 
       {/* Footer */}
