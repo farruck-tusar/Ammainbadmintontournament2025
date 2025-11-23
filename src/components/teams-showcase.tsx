@@ -147,12 +147,12 @@ export function TeamsShowcase() {
                 </div>
 
                 {/* Team Name Bold */}
-                <div className="text-gray-900 uppercase tracking-wide text-lg font-extrabold mb-2 drop-shadow-sm">
+                <div className="text-gray-900 uppercase tracking-wide pb-3 border-b-2 border-emerald-300">
                 {team.name}
                 </div>
 
                 {/* Numbered Players */}
-                <div className="mt-2 text-center space-y-1">
+                <div className="mt-2 text-center space-y-1 pb-3">
                     <div className="text-sm text-gray-700 font-medium">
                     <span className="text-emerald-600 mt-0.5">•</span> {team.player1}
                     </div>
